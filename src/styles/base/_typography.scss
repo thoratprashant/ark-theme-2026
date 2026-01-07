@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as v;
+
+body {
+  font-family: v.$font-family-base !important;
+  font-size: v.$font-size-base;
+//   color: v.$text-dark;
+//   background-color: v.$bg-light;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
