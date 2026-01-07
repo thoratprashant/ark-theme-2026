@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as v; 
+@use '../abstracts/variables' as v;  
 
 html, body {
   height: 100%;
@@ -10,11 +10,18 @@ a {
 } 
 
 body{
-    .text-primary {
-        color: #0032A0 !important;
+  .text-primary { color: v.$primary !important; }
+  .text-secondary{ color: v.$secondary !important;}
+  .text-danger { color: v.$error !important;}
+  .form-control {
+    border-radius: 4rem;
+    padding: 0.44rem 0.875rem;
+    border-color: v.$grey !important ;
+    &:focus{
+      box-shadow: none;
     }
-}
-
+  }
+} 
 
 /* Colors */
 // $primary: #3f51b5;
