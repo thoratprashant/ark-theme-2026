@@ -6,6 +6,9 @@
 @use 'styles/base/typography';
 @use 'styles/base/global';
 
+/* Auth */
+@use 'styles/components/authentication';
+
 /* Bootstrap */
 @use 'bootstrap/scss/bootstrap';
 @use '@angular/material/prebuilt-themes/indigo-pink.css';
