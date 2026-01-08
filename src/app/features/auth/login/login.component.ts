@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonService } from '../../core/helper/common.service';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-login',
@@ -27,7 +27,7 @@ export class LoginComponent {
     ]
   });
 
-  constructor(private commonService: CommonService) {}
+  constructor(private commonService: CommonService,  private router: Router) {}
 
   onLoginViaOtp(): void {
     if (this.loginForm.invalid) {
@@ -39,7 +39,7 @@ export class LoginComponent {
 
     setTimeout(() => {
       this.commonService.hideLoader();
-      alert('OTP sent!');
+      this.router.navigate(['/auth/verification-code']);
     }, 2000);
   }
 }
