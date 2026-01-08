@@ -1,20 +1,44 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core'; 
+import { Component, inject } from '@angular/core';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonService } from '../../core/helper/common.service';
-import { Router } from 'express';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
 
+  private fb = inject(FormBuilder);
 
-  constructor( private commonservice: CommonService,){}
+  loginForm = this.fb.group({
+    username: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern(
+          /^(\d{10}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
+        )
+      ]
+    ]
+  });
 
-  logInCode(){
-      this.commonservice.showLoader()
+  constructor(private commonService: CommonService) {}
+
+  onLoginViaOtp(): void {
+    if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched();
+      return;
+    }
+
+    this.commonService.showLoader();
+
+    setTimeout(() => {
+      this.commonService.hideLoader();
+      alert('OTP sent!');
+    }, 2000);
   }
 }
