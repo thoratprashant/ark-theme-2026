@@ -34,3 +34,11 @@ body{
     }
   }
 }  
+
+ @media (max-width: 767px) {
+  ::placeholder,
+  .form-control,
+  .form-label{
+    font-size: 0.875rem !important;
+  } 
+ }
