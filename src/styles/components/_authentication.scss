@@ -20,6 +20,18 @@
             .logo{
                 margin-bottom: 3rem;
             }
+            .icon--password{
+                position: absolute;
+                right: 3px;
+                top: -6px;
+                .mat-icon{
+                    color: #505050;
+                    font-size: 21px;
+                    height: 21px;
+                    width: 21px;
+
+                }
+            }
         }
         .lang--sec{
             border-top: 1px solid #E7E9EB;

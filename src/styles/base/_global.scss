@@ -14,7 +14,7 @@ body{
 
   .text-primary { color: v.$primary !important; }
   .text-secondary{ color: v.$secondary !important;}
-  .text-danger { color: v.$error !important;}
+  .text-danger, .text-error { color: v.$error !important;}
 
   // Form Controls
   .form-control {
