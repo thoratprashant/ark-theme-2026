@@ -30,6 +30,26 @@
             bottom: 0; 
             justify-content: flex-end;
             background: #fff;
+            .dropup{
+                .dropdown-toggle{
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: #0032A0;
+                    &::after{
+                        border: none; 
+                        background-image: url('/images/dropdown-up-arrow.svg');
+                        width: 12px;
+                        height: 8px;
+                        background-repeat: no-repeat;
+                        vertical-align: 0.05rem;
+                    }
+                    &.show{
+                        &::after{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
         }
         .login--wrapper{
             h2{ 

@@ -9,15 +9,22 @@
       <img src="images/logo.svg" alt="img" class="logo">
       <router-outlet></router-outlet>
     </div>
-    <div class="lang--sec">
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </button>
+    <div class="lang--sec d-flex align-items-center">
+      <span class="me-2"> Language</span>
+      <div class="dropup">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </a>
         <ul class="dropdown-menu">
-          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
-          <li><button class="dropdown-item" type="button">Dropdown item</button></li>
+          <li><button class="dropdown-item" type="button">Spanish</button></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><button class="dropdown-item" type="button">French</button></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><button class="dropdown-item" type="button">Chinese</button></li>
         </ul>
       </div>
     </div>
