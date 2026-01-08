@@ -6,10 +6,10 @@
         <label for="exampleFormControlInput1" class="form-label">Enter email ID / Mobile number <span
             class="text-error">*</span></label>
         <input type="email" class="form-control" id="first" placeholder="Enter email ID / Mobile number">
-        <div class="font-13 mt-1 text-danger" *ngIf="">Enter valid Email Id or Mobile Number </div>
+        <div class="font-13 mt-1 text-danger d-none">Enter valid Email Id or Mobile Number </div>
       </div>
       <div class="col-12">
-        <button type="button" class="btn btn-primary w-100 mb-3">Log in via Verification Code</button>
+        <button type="button" class="btn btn-primary w-100 mb-3" (click)="logInCode()">Log in via Verification Code</button>
         <button type="button" class="btn btn-primary w-100 mb-3">Log in via Password</button>
       </div>
     </div> 
